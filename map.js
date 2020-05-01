@@ -3,8 +3,8 @@ const zoomDefault = 20;
 
 const mymap = L.map('mapid').setView(coordinates, zoomDefault);
 
-L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?' + 
-            'access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+L.tileLayer(    'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?' + 
+                'access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
     maxZoom:     20,
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
                  '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
@@ -14,19 +14,19 @@ L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?' +
     zoomOffset:  -1
 }).addTo(mymap);
 
-L.marker([-21.239985, -50.405172])
+L.marker([-21.236112, -50.408834])
     .addTo(mymap)
-    .bindPopup("<b>Hello world!</b><br />I am a gas station.")
+    .bindPopup("<b>Hello world!</b><br />I am a marker.")
     .openPopup();
 
-L.circle([-21.235222, -50.407101], 100, {
+L.circle([-21.235222, -50.407101], 150, {
     color:      'red',
     fillColor:  '#f03',
     fillOpacity: 0.5
 }).addTo(mymap).bindPopup("I am a circle.");
 
 L.polygon([
-    [-21.206288, -50.438914],
+    [-21.235852, -50.407616],
     [-21.236112, -50.408834],
 ]).addTo(mymap).bindPopup("I am a polygon.");
 
